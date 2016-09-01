@@ -14,8 +14,8 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><h2><%= task.name %></h2></td>
-        <td><h2><%= task.status %></h2></td>
+        <td><%= task.name %></td>
+        <td><%= task.status %></td>
 
         <div class="btn-group">
         <td><button type="button" class="btn btn-primary btn-xs"><%= link_to 'Show', task, {style: "color: white"}  %></button></td>
