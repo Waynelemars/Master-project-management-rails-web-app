@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tasks</h1>
+<h1>295 ToDoList</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,11 +14,11 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.name %></td>
-        <td><%= task.status %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><h2><%= task.name %></h2></td>
+        <td><h2><%= task.status %></h2></td>
+        <td><button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-print"><%= link_to 'Show', task, {style: "color: white"}  %></span></button></td>
+        <td><button type="button" class="btn btn-info btn-xs"><%= link_to 'Edit', edit_task_path(task), {style: "color: white"} %></button></td>
+        <td><button type="button" class="btn btn-danger btn-xs"><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+<button type="button" class="btn btn-success btn-block"><%= link_to 'New Task', new_task_path ,{style: "color: white"}%></button>
