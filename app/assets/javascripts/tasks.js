@@ -6,13 +6,15 @@ $("#taskform").validate({
       validClass: "my-valid-class",
         rules: {
             "task[name]": {
-                required: true
+                required: true,
+                minlength: 3
             }
 
         },
         messages: {
             "task[name]": {
                 required: 'Please enter a Name',
+                minlength: jQuery.validator.format("At least {0} characters required!")
 
             }
          }
