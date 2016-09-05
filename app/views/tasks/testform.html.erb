@@ -1,0 +1,49 @@
+
+
+<script>
+
+  $("#form").validate({
+        errorClass: "my-error-class",
+        validClass: "my-valid-class",
+          rules: {
+              "name": {
+                  required: true
+              }
+
+          },
+          messages: {
+              "name": {
+                  required: 'Please enter a Name'
+
+              }
+           }
+    });
+
+    $("#form").validate();
+</script>
+
+<style>
+.my-error-class {
+    color:red;
+}
+.my-valid-class {
+    color:green;
+}
+
+.border {
+  border-width:1px;
+  border-style: solid;
+  border-color: black;
+}
+
+</style>
+
+<form action="task" id="form">
+  First name:<br>
+  <input type="text" name="name" value="Mickey">
+  <br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>

@@ -1,4 +1,39 @@
-<%= form_for(idea) do |f| %>
+<script>
+$("#ideaform").validate({
+      errorClass: "my-error-class",
+      validClass: "my-valid-class",
+        rules: {
+            "idea[name]": {
+                required: true
+            }
+
+        },
+        messages: {
+            "idea[name]": {
+                required: 'Please enter a Name',
+
+            }
+         }
+  });
+</script>
+
+<style>
+.my-error-class {
+    color:red;
+}
+.my-valid-class {
+    color:green;
+}
+
+.border {
+  border-width:1px;
+  border-style: solid;
+  border-color: black;
+}
+
+</style>
+
+<%= form_for(idea,:html => {:id => "ideaform"}) do |f| %>
   <% if idea.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
@@ -11,7 +46,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field,form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>

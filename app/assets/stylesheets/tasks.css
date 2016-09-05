@@ -1,0 +1,15 @@
+/*// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+.my-error-class {
+    color:red;
+}
+.my-valid-class {
+    color:green;
+}
+
+.border {
+  border-width:1px;
+  border-style: solid;
+  border-color: black;
+}

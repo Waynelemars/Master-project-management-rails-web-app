@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'tasks/testform'
   resources :ideas
   resources :tasks
 
