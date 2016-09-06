@@ -1,7 +1,16 @@
 
+<style>
+.navbar{
+background: rgba(0,0,0,0.7);
 
-
-<nav class="navbar navbar-full navbar-dark bg-inverse">
+}
+#nav li {
+    position: relative;
+    padding-left: 0px;
+    margin:0 0 3px 70px;
+}
+</style>
+<nav id="nav" class="navbar navbar-full navbar-dark bg-inverse">
   <%= link_to 'HOME', root_path, class: "navbar-brand" %>
   <ul class="nav navbar-nav">
 
@@ -10,6 +19,7 @@
         <li class="nav-item active">
         <%= link_to 'TODO LIST', tasks_path, class: 'nav-link' %>
         </li>
+
         <li class="nav-item active">
           <%= link_to 'IDEAS', ideas_path, class: 'nav-link' %>
         </li>
