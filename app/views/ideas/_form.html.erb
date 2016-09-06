@@ -5,7 +5,8 @@ $("#ideaform").validate({
         rules: {
             "idea[name]": {
                 required: true,
-                minlength: 3
+                minlength: 3,
+                remote: 'http://http://iot295.herokuapp.com/'
             }
 
         },
@@ -51,10 +52,10 @@ $("#ideaform").validate({
 
   <div class="field,form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-success btn-s' %>
   </div>
 <% end %>
